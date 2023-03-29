@@ -1,16 +1,15 @@
-public class FPadrao {
-    private double SalarioFixo;
+public class Fpadrao extends Funcionario {
 
-    public FPadrao(double salarioFixo) {
-        SalarioFixo = salarioFixo;
-    }
+	public Fpadrao(int matricula, String nome, double salario) {
+		super(matricula, nome, salario);
+		
+	}
 
-    public double getSalarioFixo() {
-        return SalarioFixo;
-    }
-
-    public void setSalarioFixo(double salarioFixo) {
-       this.SalarioFixo = salarioFixo;
-    }
-
+	public double calcularProventos() {
+		return getSalario();
+	}
+	
+	public String toString() {
+		return "Nome: " + getNome() + " Salario: " + getSalario();
+	}
 }
